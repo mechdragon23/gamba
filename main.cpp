@@ -11,6 +11,7 @@ int main ()
     cout << "Horse racing --- 2\n";
     cout << "Dice ----------- 3\n";
     cout << "Scratchers ----- 4\n";
+    cout << "Slots -----------5\n";
 
     cout << "\nquit ----------- 0\n";
 
@@ -19,6 +20,7 @@ int main ()
 
     while(menuSelection != 0)
     {
+        system ("CLS"); //clear screen
         switch(menuSelection)
         {
             case 1:
@@ -33,6 +35,9 @@ int main ()
             case 4:
                 //scratchers function here
                 break;
+            case 5:
+                //slots function here
+                break;
         }
 
 
@@ -43,6 +48,7 @@ int main ()
         cout << "Horse racing --- 2\n";
         cout << "Dice ----------- 3\n";
         cout << "Scratchers ----- 4\n";
+        cout << "Slots -----------5\n";
 
         cout << "\nquit ----------- 0\n";
 
