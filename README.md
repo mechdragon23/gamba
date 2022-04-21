@@ -1,2 +1,2 @@
 # gamba
-a collection of gambling games 
+a simple collection of gambling games 
