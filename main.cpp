@@ -1,4 +1,5 @@
-#include <myHeader.h>
+#include "myHeader.h"
+#include <string>
 
 int main () 
 {
@@ -21,6 +22,7 @@ int main ()
     while(menuSelection != 0)
     {
         system ("CLS"); //clear screen
+        system("clear");
         switch(menuSelection)
         {
             case 1:
@@ -37,11 +39,36 @@ int main ()
                 break;
             case 5:
                 //slots function here
+                 int option=5;
+                 
+                 while (option != 0)
+                 {
+                    string play;
+                    cout << "enter s to start spin: ";
+                    cin >> play;
+                    vector<string> symbols{"@", "%", "#", "$"};
+                    vector<int>results = spin();
+                    cout << symbols[results[0]] << " "
+                         << symbols[results[1]] << " "
+                         << symbols[results[2]] << "\n";
+       
+                    check_Results(results);
+                    cout << "would you like to play agian?\n"
+                         << "enter 5 to play again or 0 to exit slots: ";
+                    cin >> option; 
+      
+                    system("clear"); // clear scree for linux
+                    // system("CLS"); // doenst work on linux
+                     
+                 }
+                  
+                  
                 break;
         }
 
 
         system ("CLS"); //clear screen
+        system("clear"); // clear screen for linux
         cout << "Select a game:\n\n";
 
         cout << "Heads or Tails - 1\n";
