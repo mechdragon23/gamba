@@ -32,8 +32,30 @@ int main ()
                 //horse racing function here
                 break;
             case 3:
-                //dice function here
+            {
+                int choice = 3;
+                while (choice != 0){
+                    int total, result;
+                    cout << "There are 2 dice. If they roll, what do you think they'll add up to?" << endl;
+                    cout << "Enter guess: ";
+                    cin >> total;
+                    result = roll_dice(total);
+
+                    cout << "The total is " << result << "." << endl << endl;
+                    if(result == total){
+                        cout << "You guessed correctly! You win!" << endl;
+                    }else{
+                        cout << "You didn't guess the right number. You lose." << endl;
+                    }
+
+                    cout << "Play again?" << endl << endl;
+                    cout << "Enter 3 to play again or 0 to exit Dice: ";
+                    cin >> choice; 
+      
+                    system("clear");
+                }
                 break;
+            }
             case 4:
                 //scratchers function here
                 break;
