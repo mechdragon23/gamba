@@ -26,7 +26,29 @@ int main ()
         switch(menuSelection)
         {
             case 1:
-                //heads or tails function here
+                int howManyFlips = 0;
+                int randomNum = 0;
+                string head_tails = "";
+
+                cout << "How many times do you want to flip a coin? ";
+                cin >> howManyFlips;
+
+                srand((time(0)));
+
+                for (int i = 1; i <= howManyFlips; i++) {
+                    randomNum = coinToss();
+                    if (randomNum == 1) {
+                        head_tails = "Heads";
+                    }
+                    else {
+                        head_tails = "Tails";
+                    }
+
+                    cout << head_tails << endl;
+                }
+
+                system("clear");
+
                 break;
             case 2:
                 //horse racing function here
